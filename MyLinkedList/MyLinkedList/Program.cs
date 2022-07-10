@@ -196,7 +196,7 @@ namespace Datastructure
                     Console.WriteLine("Welcome to the Binary Tree program\n");
 
                     Console.WriteLine("Please choose an option");
-                    Console.WriteLine("\n1. Creating Binary Tree \n2. Find the size of tree ");
+                    Console.WriteLine("\n1. Creating Binary Tree \n2. Find the size of tree \n3. Search node through the tree: ");
                     
                     int Optionss = Convert.ToInt32(Console.ReadLine());
                     switch (Optionss)
@@ -239,6 +239,27 @@ namespace Datastructure
                         int Size = BinaryTreees.GetSize();
                         Console.WriteLine(Size);
                         break;
+
+                        case 3:
+                        Console.WriteLine("Search node through the tree: ");
+                            BinarySearchTree<int> Binary = new BinarySearchTree<int>();
+                            Binary.AddNode(56);
+                            Binary.AddNode(30);
+                            Binary.AddNode(70);
+                            Binary.AddNode(22);
+                            Binary.AddNode(40);
+                            Binary.AddNode(11);
+                            Binary.AddNode(63);
+                            Binary.AddNode(67);
+                            Binary.AddNode(16);
+                            Binary.AddNode(60);
+                            Binary.AddNode(95);
+                            Binary.AddNode(65);
+                            Binary.AddNode(3);
+                            
+                            bool result = Binary.SearchKey(63);
+                        Console.WriteLine(result);
+                        break;
                     }
                     break;
             }
@@ -246,27 +267,18 @@ namespace Datastructure
     }
 }
 
-//UC-2
-//Ability to create the
-//binary tree shown in the
-//figure
-//- Check if all are added with using size
-//method in Binary Tree
+//UC-3
+//Ability to search 63 in the Binary Tree
+//- Implement Search method and recursively search left or right nodes to find 63
 
 //Result
-//Please choose an option
-
-//1. Linked List
-//2. Stack and Que
-//3. Hash Table
-//4. Binary Tree
-//4
 //Welcome to the Binary Tree program
 
 //Please choose an option
 
 //1. Creating Binary Tree
 //2. Find the size of tree
-//2
-//Find the size of tree:
-//13
+//3. Search node through the tree:
+//3
+//Search node through the tree:
+//True
