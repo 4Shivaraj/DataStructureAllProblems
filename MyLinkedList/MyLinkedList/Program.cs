@@ -120,14 +120,33 @@ namespace Datastructure
                     Console.WriteLine("Welcome to the Stack and Queue Program\n");
 
                     Stack stacks = new Stack();
-                    Console.WriteLine("Add element at last position");
-                    stacks.Push(70);
-                    stacks.Push(30);
-                    stacks.Push(56);
-                    stacks.Display();
+                    Console.WriteLine("Please choose an option");
+                    Console.WriteLine("\n1. Add element at last position \n2. Peek And Pop");
+                    int menu = Convert.ToInt32(Console.ReadLine());
+                    switch (menu)
+                    {
+                        case 1:
+                            Console.WriteLine("Add element at last position");
+                            stacks.Push(70);
+                            stacks.Push(30);
+                            stacks.Push(56);
+                            stacks.Display();
+                            Console.ReadLine();
+                            break;
+                        case 2:
+                            Console.WriteLine("Peek And Pop");
+                            stacks.Push(70);
+                            stacks.Push(30);
+                            stacks.Push(56);
+                            stacks.Display();
+                            stacks.IsEmpty();
+                            stacks.Display();
+                            Console.ReadLine();
+                            break;
 
-                    Console.ReadLine();
+                    }
                     break;
+
             }
            
 
@@ -136,20 +155,25 @@ namespace Datastructure
     }
 }
 
-//UC-1
-//Ability to create a Stack of 56->30->70
+//UC-2
+//Ability to peak and pop from the Stack till it is empty
+//56->30->70
 //- Use LinkedList to do the Stack Operations
-//- Here push will internally call add method on LinkedList.
-//- So 70 will be added first then 30 and then 56 to make 56 on top of the Stack
 
 //Result
-//1.Linked List
-//2.Stack and Que
+//2.Peek And Pop
 //2
-//Welcome to the Stack and Queue Program
-
-//Add element at last position
+//Peek And Pop
 //70 pushed to the stack
 //30 pushed to the stack
 //56 pushed to the stack
 // 56 30 70
+//56 is at the top of the stack
+//56 popped from stack
+
+//30 is at the top of the stack
+//30 popped from stack
+
+//70 is at the top of the stack
+//70 popped from stack
+//stack is empty
