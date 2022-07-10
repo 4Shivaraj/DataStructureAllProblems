@@ -28,6 +28,18 @@ namespace Datastructure
             }
             Console.WriteLine("{0} is inserted into Queue", newNode.data);
         }
+        public void Dequeue()
+        {
+            if (this.head == null)
+            {
+                Console.WriteLine("Queue is Empty");
+            }
+            else
+            {
+                Console.WriteLine("\n{0} is dequeued from queue", this.head.data);
+                this.head = this.head.next;
+            }
+        }
         public void Display()
         {
             Node temp = this.head;
