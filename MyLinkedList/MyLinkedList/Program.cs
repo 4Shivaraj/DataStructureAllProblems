@@ -1,4 +1,5 @@
-﻿using HashTables;
+﻿using BinarySearchTreeNameSpace;
+using HashTables;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,7 +14,7 @@ namespace Datastructure
         {
             Console.WriteLine("Welcome to the Data Structure Program\n");
             Console.WriteLine("Please choose an option");
-            Console.WriteLine("\n1. Linked List \n2. Stack and Que \n3. Hash Table");
+            Console.WriteLine("\n1. Linked List \n2. Stack and Que \n3. Hash Table \n4. Binary Tree");
             int options = Convert.ToInt32(Console.ReadLine());
             switch (options)
             {
@@ -191,17 +192,46 @@ namespace Datastructure
                             break;
                     }
                     break;
+                case 4:
+                    Console.WriteLine("Welcome to the Binary Tree program\n");
+
+                    Console.WriteLine("Please choose an option");
+                    Console.WriteLine("\n1. Creating Binary Tree");
+                    BinarySearchTree<int> BinaryTree = new BinarySearchTree<int>();
+                    int Optionss = Convert.ToInt32(Console.ReadLine());
+                    switch (Optionss)
+                    {
+                        case 1:
+                        Console.WriteLine("create My Binary Node: ");
+
+                        BinarySearchTree<int> BinaryTrees = new BinarySearchTree<int>();
+                        BinaryTrees.AddNode(56);
+                        BinaryTrees.AddNode(30);
+                        BinaryTrees.AddNode(70);
+                        BinaryTrees.AddNode(22);
+                        BinaryTrees.AddNode(40);
+                        BinaryTrees.AddNode(11);
+                        BinaryTrees.AddNode(63);
+                        BinaryTrees.AddNode(67);
+                        BinaryTrees.AddNode(16);
+                        BinaryTrees.AddNode(60);
+                        BinaryTrees.AddNode(95);
+                        BinaryTrees.AddNode(65);
+                        BinaryTrees.AddNode(3);
+                        break;
+                    }
+                    break;
             }
         }
     }
 }
 
-//UC_3
-//Remove avoidable word from the phrase “Paranoids are not paranoid
-//because they are paranoid but because they keep putting themselves
-//deliberately into paranoid avoidable situations”
-//- Use LinkedList to do the Hash Table Operation like here the removal of word avoidable
-//- To do this create MyMapNode with Key Value Pair and create LinkedList of MyMapNode
+//UC-1
+//Ability to create a BST by adding 56 and then adding 30 & 70
+//- Use INode to create My Binary Node
+//- Note the key has to extend comparable to compare and determine left or right node
+//- First add 56 as root node so 30 will be
+//added to left and 70 to right
 
 //Result
 //1.Linked List

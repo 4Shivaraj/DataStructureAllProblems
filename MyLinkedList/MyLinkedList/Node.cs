@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace StacksAndQueues
+namespace MyLinkedList.LinkedList
 {
     public class Node
     {
@@ -15,8 +15,8 @@ namespace StacksAndQueues
         public Node(int data)
         {
             this.data = data;
-            this.top = null;
-            this.next = null;
+            top = null;
+            next = null;
         }
     }
 }
