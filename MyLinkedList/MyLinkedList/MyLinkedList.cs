@@ -1,14 +1,16 @@
-﻿using System;
+﻿using StacksAndQueues;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace LinkedList
+namespace Datastructure
 {
     class MyLinkedList
     {
         public Node head;
+
         public void AddLast(int data)
         {
             Node newNode = new Node(data);
