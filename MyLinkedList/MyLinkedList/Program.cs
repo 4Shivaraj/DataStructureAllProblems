@@ -167,21 +167,38 @@ namespace Datastructure
                 case 3:
                     Console.WriteLine("Welcome to the HashTable program\n");
 
-                    string paragraph = "To be or not to be";
-                    FrequencyOfWords.GetFrequencyOfWords(paragraph);
-                    Console.ReadLine();
-                    break;
+                    Console.WriteLine("Please choose an option");
+                    Console.WriteLine("\n1. Finding Frequency Of Words \n2. Finding Frequency Of Words In Paragraph");
+                    int menus = Convert.ToInt32(Console.ReadLine());
+                    switch (menus)
+                    {
+                        case 1:
+                            string paragraph = "To be or not to be";
+                            FrequencyOfWords.GetFrequencyOfWords(paragraph);
+                            Console.ReadLine();
+                            break;
+                        case 2:
+                            string paragraphs = "Paranoids are not paranoid because they are paranoid but because they keep putting themselves deliberately into paranoid avoidable situations";
+                            FrequencyOfWords.GetFrequencyOfWords(paragraphs);
 
+                            Console.ReadLine();
+                            break;
+
+                    }
+                    break;
             }
         }
     }
 }
 
-//UC_1
-//Ability to find frequency of words in a sentence like “To be or not to be”
-
+//UC_2
+//Ability to find frequency of words in a large
+//paragraph phrase “Paranoids are not paranoid because they are paranoid but
+//because they keep putting themselves deliberately into paranoid avoidable situations”
+//- Use hashcode to find index of the words in the para
+//- Create LinkedList for each index and store the words and its frequency
 //- Use LinkedList to do the Hash Table Operation
-//- To do this we create MyMapNode with Key Value Pair and create LinkedList of MyMapNode
+//- To do this create MyMapNode with Key Value Pair and create LinkedList of MyMapNode
 
 //Result
 //1.Linked List
@@ -190,15 +207,28 @@ namespace Datastructure
 //3
 //Welcome to the HashTable program
 
-//Removed successfuy with key: to
-//Removed successfuy with key: be
+//Please choose an option
+
+//1. Finding Frequency Of Words
+//2. Finding Frequency Of Words In Paragraph
+//2
+//Removed successfuy with key: are
+//Removed successfuy with key: paranoid
+//Removed successfuy with key: because
+//Removed successfuy with key: they
+//Removed successfuy with key: paranoid
 //Displaying after Add operatopn:
-//or 1
+//are 2
+//they 2
+//themselves 1
+//paranoid 3
+//because 2
+//paranoids 1
+//avoidable 1
+//keep 1
+//putting 1
+//into 1
 //not 1
-//to 2
-//be 2
-//Removed successfuy with key: or
-//After removing an item- or:
-//not 1
-//to 2
-//be 2
+//but 1
+//deliberately 1
+//situations 1
