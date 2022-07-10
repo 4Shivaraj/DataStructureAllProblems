@@ -16,7 +16,8 @@ namespace LinkedList
             Console.WriteLine("Please choose an option");
             Console.WriteLine("\n1. Add element at last position \n2. Add element at first position " +
                 "\n3. Add element at last position using Append method\n4. Insert element at perticular position" +
-                "\n5. Delete first element of Linkedlist\n6. Delete Last Element of Linkedlist\n7.Find Node with value");
+                "\n5. Delete first element of Linkedlist\n6. Delete Last Element of Linkedlist\n7.Find Node with value" +
+                "\n8. Insert After value");
             int option = Convert.ToInt32(Console.ReadLine());
             switch (option)
             {
@@ -74,6 +75,15 @@ namespace LinkedList
                     linkedList.Display();
                     linkedList.Find(30);
                     break;
+                case 8:
+                    Console.WriteLine("Insert After Value");
+                    linkedList.AddLast(56);
+                    linkedList.AddLast(30);
+                    linkedList.AddLast(70);
+                    linkedList.Display();
+                    linkedList.InsertAfter(30, 40);
+                    linkedList.Display();
+                    break;
                 default:
                     Console.WriteLine("Please enter the correct option");
                     break;
@@ -84,10 +94,12 @@ namespace LinkedList
     }
 }
 
-//UC-7
-//Ability to search LinkedList to find Node with value 30
+//UC-8
+//Ability to insert 40 after 30 to the Linked List sequence of 56->30->70
 //- Write MSTest Test Case as demonstrated in class
-//-Loop through LinkedList to find node with key 30
+//-Search LinkedList to get Node with key value 30
+//- Then Insert 40 to 30
+//- Final Sequence: 56->30->40->70
 
 //Result
 //Welcome to the LinkedList Program
@@ -101,11 +113,13 @@ namespace LinkedList
 //5. Delete first element of Linkedlist
 //6. Delete Last Element of Linkedlist
 //7.Find Node with value
-//7
-//Find Element
+//8. Insert After value
+//8
+//Insert After Value
 //56 is inserted into LinkedList
 //30 is inserted into LinkedList
 //70 is inserted into LinkedList
 //Displaying Nodes:
-// 56  30  70
-//30 is present in the linkedlist
+// 56  30  70 40 is inserted at index position 2
+//Displaying Nodes:
+// 56  30  40  70
