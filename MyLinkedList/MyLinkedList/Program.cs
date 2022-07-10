@@ -16,7 +16,7 @@ namespace LinkedList
             Console.WriteLine("Please choose an option");
             Console.WriteLine("\n1. Add element at last position \n2. Add element at first position " +
                 "\n3. Add element at last position using Append method\n4. Insert element at perticular position" +
-                "\n5. Delete first element of Linkedlist\n6. Delete Last Element of Linkedlist");
+                "\n5. Delete first element of Linkedlist\n6. Delete Last Element of Linkedlist\n7.Find Node with value");
             int option = Convert.ToInt32(Console.ReadLine());
             switch (option)
             {
@@ -66,6 +66,14 @@ namespace LinkedList
                     Console.WriteLine("\nLast element {0} is deleted", linkedList.DeleteFLastNode());
                     linkedList.Display();
                     break;
+                case 7:
+                    Console.WriteLine("Find Element");
+                    linkedList.AddLast(56);
+                    linkedList.AddLast(30);
+                    linkedList.AddLast(70);
+                    linkedList.Display();
+                    linkedList.Find(30);
+                    break;
                 default:
                     Console.WriteLine("Please enter the correct option");
                     break;
@@ -76,10 +84,10 @@ namespace LinkedList
     }
 }
 
-//UC-6
-//Ability to delete the last element in the LinkedList of sequence 56->30->70 - Write popLast method
-//- Note there is new tail
-//- Final Sequence: 56->30
+//UC-7
+//Ability to search LinkedList to find Node with value 30
+//- Write MSTest Test Case as demonstrated in class
+//-Loop through LinkedList to find node with key 30
 
 //Result
 //Welcome to the LinkedList Program
@@ -92,13 +100,12 @@ namespace LinkedList
 //4.Insert element at perticular position
 //5. Delete first element of Linkedlist
 //6. Delete Last Element of Linkedlist
-//6
-//Delete last Element
+//7.Find Node with value
+//7
+//Find Element
 //56 is inserted into LinkedList
 //30 is inserted into LinkedList
 //70 is inserted into LinkedList
 //Displaying Nodes:
 // 56  30  70
-//Last element 70 is deleted
-//Displaying Nodes:
-// 56  30
+//30 is present in the linkedlist
