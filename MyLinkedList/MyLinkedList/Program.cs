@@ -16,7 +16,7 @@ namespace LinkedList
             Console.WriteLine("Please choose an option");
             Console.WriteLine("\n1. Add element at last position \n2. Add element at first position " +
                 "\n3. Add element at last position using Append method\n4. Insert element at perticular position" +
-                "\n5. Delete first element of Linkedlist");
+                "\n5. Delete first element of Linkedlist\n6. Delete Last Element of Linkedlist");
             int option = Convert.ToInt32(Console.ReadLine());
             switch (option)
             {
@@ -57,6 +57,15 @@ namespace LinkedList
                     linkedList.DeleteFirstNode();
                     linkedList.Display();
                     break;
+                case 6:
+                    Console.WriteLine("Delete last Element");
+                    linkedList.AddLast(56);
+                    linkedList.AddLast(30);
+                    linkedList.AddLast(70);
+                    linkedList.Display();
+                    Console.WriteLine("\nLast element {0} is deleted", linkedList.DeleteFLastNode());
+                    linkedList.Display();
+                    break;
                 default:
                     Console.WriteLine("Please enter the correct option");
                     break;
@@ -67,10 +76,10 @@ namespace LinkedList
     }
 }
 
-//UC-5
-//Ability to delete the first element in the LinkedList of sequence 56->30->70 - Write pop method.
-//- Note there is new head
-//- Final Sequence: 30->70
+//UC-6
+//Ability to delete the last element in the LinkedList of sequence 56->30->70 - Write popLast method
+//- Note there is new tail
+//- Final Sequence: 56->30
 
 //Result
 //Welcome to the LinkedList Program
@@ -82,13 +91,14 @@ namespace LinkedList
 //3. Add element at last position using Append method
 //4.Insert element at perticular position
 //5. Delete first element of Linkedlist
-//5
-//Delete First Element:
+//6. Delete Last Element of Linkedlist
+//6
+//Delete last Element
 //56 is inserted into LinkedList
 //30 is inserted into LinkedList
 //70 is inserted into LinkedList
 //Displaying Nodes:
 // 56  30  70
-//First element deleted
+//Last element 70 is deleted
 //Displaying Nodes:
-// 30  70
+// 56  30
