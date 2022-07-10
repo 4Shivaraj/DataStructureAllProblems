@@ -17,7 +17,7 @@ namespace LinkedList
             Console.WriteLine("\n1. Add element at last position \n2. Add element at first position " +
                 "\n3. Add element at last position using Append method\n4. Insert element at perticular position" +
                 "\n5. Delete first element of Linkedlist\n6. Delete Last Element of Linkedlist\n7.Find Node with value" +
-                "\n8. Insert After value\n9. Delete particular value");
+                "\n8. Insert After value\n9. Delete particular value\n10. Ordered or sorted Linkedlist");
             int option = Convert.ToInt32(Console.ReadLine());
             switch (option)
             {
@@ -95,6 +95,14 @@ namespace LinkedList
                     linkedList.Size();
                     linkedList.Display();
                     break;
+                case 10:
+                    Console.WriteLine("Sorted linkedlist");
+                    linkedList.OrderedLinkedlist(56);
+                    linkedList.OrderedLinkedlist(30);
+                    linkedList.OrderedLinkedlist(40);
+                    linkedList.OrderedLinkedlist(70);
+                    linkedList.Display();
+                    break;
                 default:
                     Console.WriteLine("Please enter the correct option");
                     break;
@@ -105,8 +113,12 @@ namespace LinkedList
     }
 }
 
-///UC-9
-//Ability to delete 40 from the Linked List sequence of 56->30->40->70 and show the size of LinkedList is 3
+//UC-10
+//Ability to create Ordered Linked List in ascending order of data entered in following sequence 56, 30, 40,and 70
+//- Refactor the code to create SortedLinkedList Class
+//- Create Node that takes data that is Comparable
+//- Perform Sorting during the add method call
+//- Final Sequence: 30->40->56->70
 
 //Result
 //Welcome to the LinkedList Program
@@ -122,16 +134,12 @@ namespace LinkedList
 //7.Find Node with value
 //8. Insert After value
 //9. Delete particular value
-//9
-//Delete particular value
-//56 is inserted into LinkedList
-//30 is inserted into LinkedList
-//70 is inserted into LinkedList
-//40 is inserted at index position 2
+//10. Ordered or sorted Linkedlist
+//10
+//Sorted linkedlist
+//56 is inserted into ordered Linkedlist
+//30 is inserted into ordered Linkedlist
+//40 is inserted into ordered Linkedlist
+//70 is inserted into ordered Linkedlist
 //Displaying Nodes:
-// 56  30  40  70
-//40 is Deleted
-
-//Size of the LinkedList is 3
-//Displaying Nodes:
-// 56  30  70
+// 30  40  56  70
