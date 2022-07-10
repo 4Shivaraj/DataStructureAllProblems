@@ -38,6 +38,38 @@ namespace LinkedList
         {
             AddLast(data);
         }
+        public void Insert(int index, int data)
+        {
+            Node newNode = new Node(data);
+            if (index < 0)
+            {
+                Console.WriteLine("Invaid index position");
+            }
+            else if (index == 0)
+            {
+                AddFirst(data);
+            }
+            else
+            {
+                Node temp = this.head;
+                for (int i = 0; i < index - 1; i++)
+                {
+                    temp = temp.next;
+                }
+                newNode.next = temp.next;
+                temp.next = newNode;
+                Console.WriteLine("{0} is inserted at index position {1}", data, index);
+            }
+        }
+        public void DeleteFirstNode()
+        {
+            if (head != null)
+            {
+                head = head.next;
+                Console.WriteLine("\nFirst element deleted");
+            }
+        }
+
         public void Display()
         {
             Console.WriteLine("Displaying Nodes:");
