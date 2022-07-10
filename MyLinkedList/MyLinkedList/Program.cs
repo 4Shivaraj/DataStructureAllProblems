@@ -10,12 +10,12 @@ namespace LinkedList
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Welcome to the LinkedList Program\n");
+            Console.WriteLine("Welcome to the LinkedList Program");
 
             MyLinkedList linkedList = new MyLinkedList();
             Console.WriteLine("Please choose an option");
             Console.WriteLine("\n1. Add element at last position \n2. Add element at first position " +
-                "\n3. Add element at last position using Append method");
+                "\n3. Add element at last position using Append method\n4. Insert element at perticular position");
             int option = Convert.ToInt32(Console.ReadLine());
             switch (option)
             {
@@ -40,6 +40,13 @@ namespace LinkedList
                     linkedList.Append(70);
                     linkedList.Display();
                     break;
+                case 4:
+                    Console.WriteLine("insert element at particular position:");
+                    linkedList.Append(56);
+                    linkedList.Append(70);
+                    linkedList.Insert(1, 30);
+                    linkedList.Display();
+                    break;
                 default:
                     Console.WriteLine("Please enter the correct option");
                     break;
@@ -49,12 +56,10 @@ namespace LinkedList
         }
     }
 }
-///UC-3
-//Ability to create Linked List by appending 30 and 70 to 56
-//- Node with data 56 is First Created
-//- Next Append 30 to 56
-//- Finally Append 70 to 30
-//- LinkedList Sequence: 56->30->70
+
+///UC-4
+//Ability to insert 30 between 56 and 70
+//- Final Sequence: 56->30->70
 
 //Result
 //Welcome to the LinkedList Program
