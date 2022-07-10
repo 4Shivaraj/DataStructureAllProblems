@@ -121,7 +121,7 @@ namespace Datastructure
 
                     Stack stacks = new Stack();
                     Console.WriteLine("Please choose an option");
-                    Console.WriteLine("\n1. Add element at last position \n2. Peek And Pop");
+                    Console.WriteLine("\n1. Add element at last position \n2. Peek And Pop \n3. Create Queue");
                     int menu = Convert.ToInt32(Console.ReadLine());
                     switch (menu)
                     {
@@ -143,37 +143,35 @@ namespace Datastructure
                             stacks.Display();
                             Console.ReadLine();
                             break;
-
+                        case 3:
+                            Console.WriteLine("Create Queue");
+                            Queue queues = new Queue();
+                            queues.Enqueue(56);
+                            queues.Enqueue(30);
+                            queues.Enqueue(70);
+                            queues.Display();
+                            break;
                     }
                     break;
-
             }
-           
-
-
         }
     }
 }
 
-//UC-2
-//Ability to peak and pop from the Stack till it is empty
-//56->30->70
-//- Use LinkedList to do the Stack Operations
+//UC-3
+//Ability to create a Queue of 56->30->70
+//- Use LinkedList to do the Queue Operations
+//- Here enqueu will internally call append method on LinkedList.
+//- So 56 will be added first then 30 and then 70 to make 56 on top of the Stack
 
 //Result
-//2.Peek And Pop
-//2
-//Peek And Pop
-//70 pushed to the stack
-//30 pushed to the stack
-//56 pushed to the stack
+//Please choose an option
+
+//1. Add element at last position
+//2. Peek And Pop
+//3. Create Queue
+//3
+//56 is inserted into Queue
+//30 is inserted into Queue
+//70 is inserted into Queue
 // 56 30 70
-//56 is at the top of the stack
-//56 popped from stack
-
-//30 is at the top of the stack
-//30 popped from stack
-
-//70 is at the top of the stack
-//70 popped from stack
-//stack is empty
