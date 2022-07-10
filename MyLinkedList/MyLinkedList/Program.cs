@@ -1,4 +1,5 @@
-﻿using System;
+﻿using HashTables;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -12,7 +13,7 @@ namespace Datastructure
         {
             Console.WriteLine("Welcome to the Data Structure Program\n");
             Console.WriteLine("Please choose an option");
-            Console.WriteLine("\n1. Linked List \n2. Stack and Que");
+            Console.WriteLine("\n1. Linked List \n2. Stack and Que \n3. Hash Table");
             int options = Convert.ToInt32(Console.ReadLine());
             switch (options)
             {
@@ -163,25 +164,41 @@ namespace Datastructure
                             break;
                     }
                     break;
+                case 3:
+                    Console.WriteLine("Welcome to the HashTable program\n");
+
+                    string paragraph = "To be or not to be";
+                    FrequencyOfWords.GetFrequencyOfWords(paragraph);
+                    Console.ReadLine();
+                    break;
+
             }
         }
     }
 }
 
-//UC-4
-// Ability to dequeue from the beginning
-//-Use LinkedList to do the Queue Operations
+//UC_1
+//Ability to find frequency of words in a sentence like “To be or not to be”
+
+//- Use LinkedList to do the Hash Table Operation
+//- To do this we create MyMapNode with Key Value Pair and create LinkedList of MyMapNode
 
 //Result
-//1.Add element at last position
-//2. Peek And Pop
-//3. Create Queue
-//4. Create DeQueue
-//4
-//Create DeQueue
-//56 is inserted into Queue
-//30 is inserted into Queue
-//70 is inserted into Queue
-// 56 30 70
-//56 is dequeued from queue
-// 30 70
+//1.Linked List
+//2.Stack and Que
+//3. Hash Table
+//3
+//Welcome to the HashTable program
+
+//Removed successfuy with key: to
+//Removed successfuy with key: be
+//Displaying after Add operatopn:
+//or 1
+//not 1
+//to 2
+//be 2
+//Removed successfuy with key: or
+//After removing an item- or:
+//not 1
+//to 2
+//be 2
