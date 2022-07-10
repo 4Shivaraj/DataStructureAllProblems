@@ -25,6 +25,11 @@ namespace HashTables
             }
             Console.WriteLine("Displaying after Add operatopn:");
             hashTable.Display();
+
+            string removeThis = "avoidable";
+            hashTable.Remove(removeThis);
+            Console.WriteLine("\nAfter removing an item- {0}:", removeThis);
+            hashTable.Display();
         }
     }
 }
