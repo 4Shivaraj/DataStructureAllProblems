@@ -196,14 +196,14 @@ namespace Datastructure
                     Console.WriteLine("Welcome to the Binary Tree program\n");
 
                     Console.WriteLine("Please choose an option");
-                    Console.WriteLine("\n1. Creating Binary Tree");
-                    BinarySearchTree<int> BinaryTree = new BinarySearchTree<int>();
+                    Console.WriteLine("\n1. Creating Binary Tree \n2. Find the size of tree ");
+                    
                     int Optionss = Convert.ToInt32(Console.ReadLine());
                     switch (Optionss)
                     {
+
                         case 1:
                         Console.WriteLine("create My Binary Node: ");
-
                         BinarySearchTree<int> BinaryTrees = new BinarySearchTree<int>();
                         BinaryTrees.AddNode(56);
                         BinaryTrees.AddNode(30);
@@ -219,6 +219,26 @@ namespace Datastructure
                         BinaryTrees.AddNode(65);
                         BinaryTrees.AddNode(3);
                         break;
+
+                        case 2:
+                        Console.WriteLine("Find the size of tree: ");
+                        BinarySearchTree<int> BinaryTreees = new BinarySearchTree<int>();
+                        BinaryTreees.AddNode(56);
+                        BinaryTreees.AddNode(30);
+                        BinaryTreees.AddNode(70);
+                        BinaryTreees.AddNode(22);
+                        BinaryTreees.AddNode(40);
+                        BinaryTreees.AddNode(11);
+                        BinaryTreees.AddNode(63);
+                        BinaryTreees.AddNode(67);
+                        BinaryTreees.AddNode(16);
+                        BinaryTreees.AddNode(60);
+                        BinaryTreees.AddNode(95);
+                        BinaryTreees.AddNode(65);
+                        BinaryTreees.AddNode(3);
+                        int Size = BinaryTreees.GetSize();
+                        Console.WriteLine(Size);
+                        break;
                     }
                     break;
             }
@@ -226,59 +246,27 @@ namespace Datastructure
     }
 }
 
-//UC-1
-//Ability to create a BST by adding 56 and then adding 30 & 70
-//- Use INode to create My Binary Node
-//- Note the key has to extend comparable to compare and determine left or right node
-//- First add 56 as root node so 30 will be
-//added to left and 70 to right
+//UC-2
+//Ability to create the
+//binary tree shown in the
+//figure
+//- Check if all are added with using size
+//method in Binary Tree
 
 //Result
-//1.Linked List
-//2.Stack and Que
+//Please choose an option
+
+//1. Linked List
+//2. Stack and Que
 //3. Hash Table
-//3
-//Welcome to the HashTable program
+//4. Binary Tree
+//4
+//Welcome to the Binary Tree program
 
 //Please choose an option
 
-//1. Finding Frequency Of Words
-//2. Finding Frequency Of Words In Paragraph
-//3. Remove Particular Word From Paragraph
-//3
-//Removed successfully with key: are
-//Removed successfully with key: paranoid
-//Removed successfully with key: because
-//Removed successfully with key: they
-//Removed successfully with key: paranoid
-//Displaying after Add operatopn:
-//deliberately 1
-//paranoids 1
-//because 2
-//themselves 1
-//but 1
-//into 1
-//paranoid 3
-//keep 1
-//situations 1
-//they 2
-//not 1
-//avoidable 1
-//are 2
-//putting 1
-//Removed successfully with key: avoidable
-
-//After removing an item- avoidable:
-//deliberately 1
-//paranoids 1
-//because 2
-//themselves 1
-//but 1
-//into 1
-//paranoid 3
-//keep 1
-//situations 1
-//they 2
-//not 1
-//are 2
-//putting 1
+//1. Creating Binary Tree
+//2. Find the size of tree
+//2
+//Find the size of tree:
+//13
